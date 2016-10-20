@@ -1,3 +1,5 @@
 Rails.application.routes.draw do
-  resources :students, only: :index
+  get 'students', :controller => :students, :action => 'index'
+  get 'students/:id', :controller => :students, :action => "show"
+  #resources :students, only: :index
 end
